@@ -17,7 +17,7 @@
 using namespace std;
 
 #define int long long int
-#define double long double
+// #define double long double
 // #define INT_MAX LLONG_MAX
 // #define INT_MIN LLONG_MIN
 #define endl '\n'
@@ -70,16 +70,13 @@ void resolve()
 {
 	int n;
 	cin>>n;
-	while(n!=1){
-		cout<<n<<" ";
-		if(n%2==0){
-			n=n/2;
-		}
-		else{
-			n=n*3+1;
-		}
+	vr(v,int,n-1);
+	vin(v);
+	int sum=0;
+	loop(0,n-1,i){
+		sum+=v[i];
 	}
-	cout<<1<<endl;
+	cout<<((long long)n*(n+1)/2)-sum<<endl;
 }
 int32_t main()
 {
